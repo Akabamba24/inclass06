@@ -34,10 +34,12 @@ See [`docs/critical_thinking.md`](docs/critical_thinking.md). Portrait/landscape
 phone-emulator observations and screenshots still need to be recorded on the
 assigned phone device. The app was checked in Chrome during this implementation.
 
+GitHub repository: https://github.com/Akabamba24/inclass06
+
 ## Submission checklist
 
 - [x] Release APK built.
 - [ ] Test the APK on the assigned phone emulator or a physical phone.
 - [ ] Record portrait and landscape device evidence in the critical-thinking write-up.
-- [ ] Push the source to the student's GitHub repository and submit its URL.
+- [x] Source pushed to the GitHub repository; URL is listed above.
 - [ ] Submit the APK, repository URL, and assigned write-up to Dropbox.
