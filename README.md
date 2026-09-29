@@ -11,23 +11,6 @@ In-Class Activity 06: drawing with Flutter `CustomPainter`.
 - Tap the drawing to cycle expressions; long-press to randomize; Undo restores the previous drawing configuration.
 - Canvas examples use circles, rectangles, rounded rectangles, lines, arcs, ovals, and paths.
 
-## Run and verify
-
-```sh
-flutter pub get
-flutter run -d chrome
-flutter test
-flutter analyze
-```
-
-The release APK is generated with:
-
-```sh
-flutter build apk --release
-```
-
-Output: `build/app/outputs/flutter-apk/app-release.apk`.
-
 ## Activity write-up
 
 See [`docs/critical_thinking.md`](docs/critical_thinking.md). Portrait/landscape
