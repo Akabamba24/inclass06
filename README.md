@@ -31,15 +31,6 @@ Output: `build/app/outputs/flutter-apk/app-release.apk`.
 ## Activity write-up
 
 See [`docs/critical_thinking.md`](docs/critical_thinking.md). Portrait/landscape
-phone-emulator observations and screenshots still need to be recorded on the
-assigned phone device. The app was checked in Chrome during this implementation.
+emulator observations and screenshots are recorded there.
 
 GitHub repository: https://github.com/Akabamba24/inclass06
-
-## Submission checklist
-
-- [x] Release APK built.
-- [ ] Test the APK on the assigned phone emulator or a physical phone.
-- [ ] Record portrait and landscape device evidence in the critical-thinking write-up.
-- [x] Source pushed to the GitHub repository; URL is listed above.
-- [ ] Submit the APK, repository URL, and assigned write-up to Dropbox.

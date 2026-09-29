@@ -25,21 +25,22 @@ after one of these controls changes. Returning `true` unconditionally would
 redraw even when all inputs are identical. Comparing the actual configuration
 fields avoids both stale drawings and unnecessary redraws.
 
-## Device evidence to record
+## Pixel 10 emulator evidence
 
-The source implements the portrait/landscape layouts and interactive controls,
-but device behavior must be confirmed on the assigned phone emulator or a
-physical device. Record the actual device and observations here after running
-the app:
+The release APK was installed and launched on the Pixel 10 Android emulator on
+September 29, 2026. `MainActivity` was confirmed as the resumed activity.
 
-- Portrait device and result: _not yet run in this workspace._
-- Landscape device and result: _not yet run in this workspace._
-- Slider redraw observation / DevTools evidence: _not yet captured._
-- Configuration tested: mood, eye radius/gap, face style, and accessories.
+- [Portrait capture](evidence/pixel10-portrait.png): face and controls render in
+  portrait; the control panel scrolls below the visible area.
+- [Landscape capture](evidence/pixel10-landscape.png): the face and control
+  panel lay out side by side without overflow stripes in the captured screen.
+- [Interaction capture](evidence/pixel10-interactions.png): Sleepy expression,
+  mood 0.37, and the hat accessory render together.
+- Moving the mood slider from 0.82 to 0.37 changed its displayed value and the
+  painter's face color/expression. The accessibility layout reported 37%.
+- Hat and glasses toggled independently. Undo removed the glasses while
+  preserving the hat, restoring the previous configuration.
 
-To compare repaint strategies, temporarily change `shouldRepaint` to always
-return `false`, move a slider on the device, and observe that the painter keeps
-its previous drawing. Restore the field comparisons, move the slider again,
-and observe that the drawing follows the control. Do not submit the temporary
-`false` version. Include a screenshot or a short DevTools observation in the
-final write-up once the device check is performed.
+These checks show that changed painter inputs repaint on the device. The
+implementation compares every `FaceConfig` field in `shouldRepaint`; the
+temporary always-false comparison build was not run.
